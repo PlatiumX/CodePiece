@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Piece</title>
+  <link rel="stylesheet" href="Index.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>⚓ Code Piece ⚓</h1>
+    <nav>
+      <ul>
+        <li><a href="#mi-barco">Mi Barco</a></li>
+        <li><a href="#islas-conocimiento">Islas de Conocimiento</a></li>
+        <li><a href="#log-pose">Log Pose</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="mi-barco" class="seccion">
+  <h2>🌍 Mi Barco</h2>
+  <h3>🏴‍☠️ ¡Únete a la tripulación!</h3>
+  <p>
+    Bienvenido a bordo, explorador digital. Este barco no navega mares comunes, sino los vastos océanos del conocimiento. Si estás buscando tesoros de sabiduría en programación, estás en el lugar correcto.
+    <br><br>
+    Prepárate para zarpar hacia las <strong>Islas de Conocimiento</strong>, enfrentar desafíos y convertirte en el rey del código. ⚔️
+    <br><br>
+    ¿Estás listo para esta aventura? ¡Entonces sigue navegando y encuentra tu próximo poder!
+  </p>
+  <a href="#islas-conocimiento" class="cta-boton">🌊 ¡Explora las islas!</a>
+
+</section>
+
+    <section id="islas-conocimiento" class="seccion">
+    <h2>🌠 Islas de Conocimiento</h2>
+    <div class="islas">
+        <div class="isla" onclick="mostrarDescripcion('html')">🌐 HTML</div>
+        <div class="isla" onclick="mostrarDescripcion('css')">🎨 CSS</div>
+        <div class="isla" onclick="mostrarDescripcion('js')">🧠 JavaScript</div>
+    </div>
+
+    <!-- Descripciones ocultas -->
+ <div class="descripcion-contenedor">
+    <div id="html" class="descripcion oculto">
+  <h3>🌐 ¿Qué es HTML?</h3>
+  <p>
+    HTML (HyperText Markup Language) es un lenguaje de marcado estándar que se utiliza para crear páginas web. 
+    Define la estructura y el contenido de una página web, como texto, imágenes, enlaces y otros elementos multimedia. 
+    Básicamente, es el esqueleto que permite a los navegadores mostrar el contenido de una página de manera organizada y comprensible.
+  </p>
+  <p>
+    En términos más sencillos, HTML utiliza etiquetas para marcar diferentes partes de un documento web, indicando al navegador cómo mostrar cada elemento. 
+    Por ejemplo, una etiqueta <code>&lt;p&gt;</code> indica un párrafo, <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> indican diferentes niveles de encabezados, 
+    <code>&lt;img&gt;</code> inserta imágenes, y <code>&lt;a&gt;</code> crea enlaces.
+  </p>
+  <h4>🔑 Puntos clave sobre HTML:</h4>
+  <ul>
+    <li><strong>No es un lenguaje de programación:</strong> A diferencia de lenguajes como Python o JavaScript, HTML no realiza operaciones lógicas ni procesa datos. Se dedica a la estructura y presentación del contenido.</li>
+    <li><strong>Trabaja en conjunto con CSS y JavaScript:</strong> HTML proporciona la estructura, CSS se encarga del diseño (colores, fuentes, etc.), y JavaScript añade interactividad y comportamiento dinámico a las páginas web.</li>
+    <li><strong>Es fundamental para la web:</strong> Sin HTML, no habría una forma estándar de organizar el contenido en la web, y los navegadores no podrían interpretar correctamente las páginas.</li>
+    <li><strong>Versiones:</strong> HTML ha evolucionado a lo largo del tiempo, con versiones como HTML5 siendo la más reciente, ofreciendo nuevas funcionalidades y capacidades.</li>
+    <li><strong>Fácil de aprender:</strong> HTML es considerado un lenguaje relativamente fácil de aprender, especialmente para principiantes en desarrollo web.</li>
+  </ul>
+  <p><strong>En resumen:</strong> HTML es la base de cualquier página web, proporcionando la estructura y el contenido que vemos en línea.</p>
+</div>
+
+    <div id="css" class="descripcion oculto">
+         <h3>🎨 ¿Qué es CSS?</h3>
+        <p>
+            <strong>CSS</strong>, o <em>Hojas de Estilo en Cascada</em> (del inglés, <em>Cascading Style Sheets</em>), es un lenguaje de diseño gráfico utilizado para definir la presentación de documentos HTML y XML. En esencia, CSS se encarga de la apariencia de una página web, determinando aspectos como colores, fuentes, diseño y disposición de los elementos, separando la estructura del contenido (HTML) de su presentación.
+        </p>
+
+        <h4>🎯 ¿Qué hace CSS?</h4>
+        <ul>
+            <li><strong>Controla la apariencia visual:</strong> Permite especificar cómo se deben mostrar los elementos de una página web, incluyendo texto, imágenes, fondos y otros componentes.</li>
+            <li><strong>Separa contenido y presentación:</strong> Esta separación facilita la gestión y el mantenimiento del diseño web, ya que los cambios en la apariencia no afectan el contenido HTML subyacente.</li>
+            <li><strong>Permite diseños responsivos:</strong> CSS permite crear diseños que se adaptan a diferentes tamaños de pantalla y dispositivos, mejorando la experiencia del usuario.</li>
+            <li><strong>Mejora la accesibilidad:</strong> Puede usarse para ajustar el contraste de colores o el tamaño de la fuente, beneficiando a usuarios con discapacidades visuales.</li>
+            <li><strong>Facilita la reutilización del código:</strong> Las hojas de estilo CSS pueden ser reutilizadas en múltiples páginas web, lo que ahorra tiempo y esfuerzo en el desarrollo.</li>
+        </ul>
+
+        <h4>⚙️ ¿Cómo funciona CSS?</h4>
+        <ul>
+            <li><strong>Selectores:</strong> Identifican los elementos HTML a los que se aplicarán los estilos. Por ejemplo, un selector puede apuntar a todas las etiquetas <code>&lt;p&gt;</code> o a un elemento específico con un <code>id</code>.</li>
+            <li><strong>Propiedades y valores:</strong> Una vez seleccionado un elemento, se le aplican propiedades con valores específicos. Por ejemplo, la propiedad <code>color</code> puede tener el valor <code>red</code>, y la propiedad <code>font-size</code> puede tener el valor <code>16px</code>.</li>
+            <li><strong>Hojas de estilo:</strong> Los estilos CSS se pueden aplicar de varias formas:
+            <ul>
+                <li><strong>Externas:</strong> En archivos separados con extensión <code>.css</code>, vinculados mediante <code>&lt;link&gt;</code>.</li>
+                <li><strong>Internas:</strong> Dentro de la etiqueta <code>&lt;style&gt;</code> en el <code>&lt;head&gt;</code> de la página HTML.</li>
+                <li><strong>En línea:</strong> Directamente en los elementos HTML usando el atributo <code>style</code>.</li>
+            </ul>
+            </li>
+        </ul>
+
+        <p>
+            En resumen, <strong>CSS</strong> es una herramienta esencial para el diseño web moderno, permitiendo crear páginas atractivas, funcionales y fáciles de mantener.
+        </p>
+    </div>
+    <div id="js" class="descripcion oculto">
+         <h3>🧠 ¿Qué es JavaScript?</h3>
+  <p>
+    <strong>JavaScript</strong>, a menudo abreviado como <strong>JS</strong>, es un lenguaje de programación ligero y versátil que se utiliza principalmente para hacer que las páginas web sean interactivas y dinámicas. Se ejecuta directamente en el navegador web del usuario, lo que permite a los desarrolladores realizar acciones como actualizar contenido en tiempo real, crear animaciones y validar formularios sin necesidad de recargar la página.
+  </p>
+  <p>
+    En detalle, JavaScript es un lenguaje de scripting que se incrusta en páginas HTML o se referencia a través de archivos <code>.js</code> externos. Cuando un navegador carga una página web con JavaScript, ejecuta el script junto con el código HTML y CSS. Esto permite añadir interacciones, efectos visuales y funcionalidades que enriquecen la experiencia del usuario.
+  </p>
+
+  <h4>Algunos de los usos más comunes de JavaScript son:</h4>
+  <ul>
+    <li><strong>Interacción con el usuario:</strong> Validación de formularios, mostrar mensajes emergentes, manejar eventos de clic, etc.</li>
+    <li><strong>Actualización dinámica de contenido:</strong> Cambiar partes de una página sin recargarla, como mostrar nuevas publicaciones en un muro de redes sociales.</li>
+    <li><strong>Animaciones y efectos visuales:</strong> Crear transiciones, efectos de desplazamiento, animaciones de imágenes y otros efectos visuales.</li>
+    <li><strong>Desarrollo de aplicaciones web:</strong> Crear interfaces de usuario interactivas y funcionalidades complejas en aplicaciones web.</li>
+    <li><strong>Desarrollo de aplicaciones móviles:</strong> Con frameworks como React Native, se puede utilizar JavaScript para crear aplicaciones móviles para iOS y Android.</li>
+  </ul>
+
+  <p>
+    En resumen, <strong>JavaScript</strong> es una herramienta fundamental para el desarrollo web moderno, permitiendo crear páginas web interactivas, dinámicas y atractivas.
+  </p>
+    </div>
+</div>
+
+            </section>
+
+
+       <section id="log-pose" class="seccion">
+  <h2><span class="brujula">🧭</span> Log Pose</h2>
+  <p>
+    Así como el Log Pose guía a los piratas por Grand Line, esta sección será tu brújula en el océano de la programación. Aquí seguirás tu propio mapa hacia el tesoro del conocimiento. 🏴‍☠️
+  </p>
+
+  <ul class="ruta">
+    <li>
+      📌 Fundamentos de la Web 
+      <a href="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web" target="_blank">[Ver recurso]</a>
+    </li>
+    <li>
+      📌 Programación básica 
+      <a href="https://www.w3schools.com/js/js_intro.asp" target="_blank">[Ver recurso]</a>
+
+    </li>
+    <li>
+      📌 Git y GitHub 
+      <a href="https://docs.github.com/es/get-started/quickstart" target="_blank">[Guía GitHub]</a>
+    </li>
+  </ul>
+
+  <blockquote class="consejo">
+    “No importa cuántas veces falles, cada línea de código es una ola que te acerca a tu tesoro. ¡No te rindas, nakama!” ⚓
+  </blockquote>
+</section>
+
+
+  <footer>
+    <p>© 2025 Code Piece - Desarrollado por Platium con la colaboración de Lunita</p>
+  </footer>
+  <script src="Index.js"></script>
+</body>
+</html>

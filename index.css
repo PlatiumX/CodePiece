@@ -1,0 +1,235 @@
+:root {
+  --azul-marino: #001f3f;
+  --dorado: #FFD700;
+  --blanco: #ffffff;
+  --rojo: #FF4136;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+}
+
+header {
+  background-color: var(--rojo);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--blanco);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* para que en pantallas pequeñas los enlaces bajen de línea */
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--dorado);
+}
+
+.seccion {
+  padding: 2rem;
+  border-bottom: 2px solid var(--dorado);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.islas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center; /* Centra las islas */
+}
+
+.isla {
+  background-color: var(--blanco);
+  color: var(--azul-marino);
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 150px;
+  max-width: 200px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.isla:hover,
+.isla:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.ruta li {
+  margin: 0.5rem 0;
+}
+
+footer {
+  background-color: var(--rojo);
+  text-align: center;
+  padding: 1rem;
+  color: var(--blanco);
+  font-size: 0.9rem;
+}
+
+/* Animación hover general */
+.seccion:hover {
+  background-color: rgba(255, 215, 0, 0.05);
+  box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.15);
+  transition: all 0.5s ease;
+}
+
+.seccion h2 {
+  color: var(--dorado);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  transition: text-shadow 0.3s ease;
+}
+
+.seccion h2:hover {
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+}
+
+.cta-boton {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: var(--dorado);
+  color: var(--azul-marino);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-boton:hover,
+.cta-boton:focus {
+  transform: scale(1.05);
+  background-color: #ffe066;
+  outline: none;
+}
+
+.descripcion-contenedor {
+  margin-top: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--blanco);
+  border-left: 4px solid var(--dorado);
+  transition: all 0.3s ease;
+}
+
+.descripcion {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.descripcion.visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.brujula {
+  display: inline-block;
+  animation: girarBrujula 4s linear infinite;
+}
+
+@keyframes girarBrujula {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#log-pose:hover,
+#log-pose:focus {
+  background-color: rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.3);
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+#log-pose h2 {
+  color: var(--dorado);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+/* Enlaces generales */
+a {
+  color: #1abc9c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #16a085;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Media Queries para celulares */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .islas {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .isla {
+    flex: none;
+    max-width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem 1.25rem;
+  }
+  .seccion {
+    padding: 1rem 1rem 2rem;
+  }
+  .cta-boton {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+  .descripcion-contenedor {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  footer {
+    font-size: 0.85rem;
+    padding: 0.75rem 0.5rem;
+  }
+}
